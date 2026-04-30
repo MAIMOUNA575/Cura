@@ -16,6 +16,12 @@ body {
 a {
   text-decoration: none;
 }
+
+.erreur{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
  
 .header {
   display: flex;
