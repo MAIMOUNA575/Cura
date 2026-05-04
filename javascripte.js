@@ -11,26 +11,36 @@
 
 const utilidefauld = [
     {
-        nom:'kouakou cambpell',
-        email:'kouakoucampbell@.gmail',
-        password:'123456890',
+        nom: 'kouakou campbell',
+        email: 'kouakoucampbell@gmail.com',
+        password: '123456890',
     }
-]
-document.querySelector('.sza')?.addEventListener('click',function(e){
-    e.preventDefault();
-   const emailSaisi = document.querySelector('.shi').value.trim();
-   const passwordSaisi = document.querySelector('.shiv').value.trim();
-   const erreur =document.querySelector('.erreur');
+];
 
-   if(!emailSaisi || !passwordSaisi){
-    erreur.textContent="veuillez remplir le champs";
-    erreur.style.color = "red";
-        return; // On arrête l'exécution ici
-   }
-   const utilisateurTrouver = utilidefauld.find((user)=>user.email===emailSaisi); 
-   if(utilisateurTrouver){
-    if(passwordutitilisateur.password===passwordSaisi){
-        window.location.href='./index2.html'
+document.querySelector('.sza')?.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const emailSaisi = document.querySelector('.shiv').value.trim();    
+    const passwordSaisi = document.querySelector('.shi').value.trim();  
+    const erreur = document.querySelector('.erreur');
+
+    if (!emailSaisi || !passwordSaisi) {
+        erreur.textContent = "Veuillez remplir tous les champs";
+        erreur.style.color = "red";
+        return;
     }
-   }
-})
+
+    const utilisateurTrouver = utilidefauld.find((user) => user.email === emailSaisi);
+
+    if (utilisateurTrouver) {
+        if (utilisateurTrouver.password === passwordSaisi) {
+            window.location.href = './index/index2.html'; 
+        } else {
+            erreur.textContent = "Mot de passe incorrect";
+            erreur.style.color = "red";
+        }
+    } else {
+        erreur.textContent = "L'email n'existe pas";
+        erreur.style.color = "red";
+    }
+});
