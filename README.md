@@ -39,9 +39,4 @@ Le parcours utilisateur se divise en trois piliers :
 
 ---
 
-## 👨‍💻 Auteur
-
-**[Ton Nom/Pseudo]** *Porteur de projet et concepteur de Cura.*
-
----
 © 2026 Cura - Tous droits réservés.
